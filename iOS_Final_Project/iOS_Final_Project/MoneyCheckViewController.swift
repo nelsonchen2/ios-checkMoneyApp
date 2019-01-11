@@ -50,7 +50,7 @@ class MoneyCheckViewController: UITableViewController , UIImagePickerControllerD
                 let json =  try JSON(data: dataa!)
                 let buyingUSDHead = json["data"]["exchangeRate"][0]["rate"][0]["cBuying"].floatValue
                 let buyingTWDHead = json["data"]["exchangeRate"][13]["rate"][0]["cBuying"].floatValue
-                americamoney.text = String(buyingUSDHead)
+                self.americamoney.text = String(buyingUSDHead)
                 self.taiwanMoney.text = String(buyingTWDHead)
             }
             catch{
